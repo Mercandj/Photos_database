@@ -31,7 +31,8 @@ DROP TABLE IF EXISTS `Categorie` ;
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `Categorie` (
   `nom` VARCHAR(45) NOT NULL,
-  `description` VARCHAR(45) NOT NULL,
+  `description` VARCHAR(100) NOT NULL,
+  `date` DATE NOT NULL,
   PRIMARY KEY (`nom`))
 ENGINE = InnoDB;
 
@@ -52,6 +53,7 @@ CREATE TABLE IF NOT EXISTS `Image` (
   `taille_icone` VARCHAR(100) NOT NULL,
   `note` INT NOT NULL,
   `commentaire` VARCHAR(500) NOT NULL,
+  `date` DATE NOT NULL,
   `Utilisateur_nom` VARCHAR(45) NOT NULL,
   `Categorie_nom` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`url`, `Utilisateur_nom`, `Categorie_nom`))
@@ -68,6 +70,7 @@ SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `Commentaire` (
   `id` INT NOT NULL,
   `contenu` VARCHAR(500) NOT NULL,
+  `date` DATE NOT NULL,
   `Image_url` VARCHAR(100) NOT NULL,
   `Image_Utilisateur_nom` VARCHAR(45) NOT NULL,
   `Image_Categorie_nom` VARCHAR(45) NOT NULL,
@@ -85,6 +88,7 @@ DROP TABLE IF EXISTS `Note` ;
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `Note` (
   `valeur` INT NOT NULL,
+  `date` DATE NOT NULL,
   `Image_url` VARCHAR(100) NOT NULL,
   `Image_Utilisateur_nom` VARCHAR(45) NOT NULL,
   `Image_Categorie_nom` VARCHAR(45) NOT NULL,
