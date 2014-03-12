@@ -34,7 +34,7 @@ $_SESSION['age'] = 24;
 					// Connexion à la base de données
 					try
 					{
-						$bdd = new PDO('mysql:host=localhost;dbname=base_1', 'root', '');
+						$bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
 					}
 					catch(Exception $e)
 					{
@@ -42,7 +42,7 @@ $_SESSION['age'] = 24;
 					}
 
 					// On récupère tt
-					$req = $bdd->query('SELECT * FROM `images` WHERE 1');
+					$req = $bdd->query('SELECT * FROM `image` WHERE 1');
 
 					while ($donnees = $req->fetch())
 					{

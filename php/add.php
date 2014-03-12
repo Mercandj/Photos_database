@@ -22,7 +22,7 @@
   // Connexion à la base de données
   try
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=base_1', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
   }
   catch(Exception $e)
   {
@@ -31,7 +31,7 @@
 
 
 
-  $req = $bdd->prepare('INSERT INTO images(url, description, date, titre) VALUES(:url, :description, :date, :titre)');
+  $req = $bdd->prepare('INSERT INTO image(url, description, date, titre) VALUES(:url, :description, :date, :titre)');
   $req->execute(array(
     'url' => $url,
     'description' => $description,
