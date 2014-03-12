@@ -1,0 +1,147 @@
+header {
+	position: fixed;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #222;
+	font-size: 10pt;
+	width: 100%;
+	height: 12%;
+	left: 0;
+	top: 0;
+	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+}
+
+
+.header_texte {
+
+	text-align: center;
+	
+	color:#fff;
+
+	font-family:"Calibri";
+	font-weight: 300;
+	font-size: 11.0vh;
+	line-height: 1;
+	letter-spacing: 4px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: -0.3em;
+
+}
+
+footer {
+	position: fixed;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #222;
+	font-size: 10pt;
+	width: 100%;
+	height: 8%;
+	left: 0;
+	bottom: 0;
+	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+}
+
+.saisie {
+	background: #eef;
+	/*color: #aaa;*/
+	text-align: center;
+	color: #777;
+	width: 150px;
+	height: 30px;
+	top: 20px;
+	font-family:"Calibri";
+	font-size:20px;
+	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	margin-right: 10px;
+}
+
+.button {
+	
+	background: #eef;
+	/*color: #aaa;*/
+	color: #777;
+	width: 130px;
+	margin-top: 15px;
+	height: 30px;
+	font-family:"Calibri";
+	font-size:20px;
+	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+}
+
+body {
+
+	margin-top: 12%;
+	margin-bottom: 8%;
+}
+
+
+
+h1 {
+	font-family:"Calibri";
+	color:#777;
+	font-weight: 300;
+	font-size: 4.2em;
+	line-height: 1;
+	letter-spacing: 4px;
+	margin: 0;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	top: 12%;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: -0.3em;
+}
+
+h1 strong {
+	color: #777;
+}
+
+h2 {
+	color:white;
+	font-family:"Calibri";
+	margin-top: 23px;
+	margin-bottom: 12px;
+	font-weight: 400;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+
+h3 {
+	margin-top: 10px;
+	color: rgba(0,0,0,0.4);
+	font-family:"Calibri";
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+h3 strong {
+	color: rgba(0,0,0,0.7);
+}
+
+
+
+.pt-main {
+
+
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-image: url('images/noir65.png');
+	background-origin: padding-box;
+	background-repeat: repeat;
+	background-size: auto auto;
+	font-family: 'Open Sans',sans-serif;
+	font-size: 16px;
+	max-width: 400px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+
+  	
+  	margin-left: 30px;
+}
