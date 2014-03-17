@@ -1,6 +1,8 @@
 
-<?php include 'inc/log.php';
+<?php 
 
+include 'inc/log.php';
+include 'Image.php';
 
   function w_log($titre, $url, $description) {
     $date = date("d-m-Y");
@@ -16,9 +18,9 @@
   $titre = $_POST['titre'];
   $url = $_POST['url'];
   $description = $_POST['description'];
+
+  $note = 0;
   
-
-
   // Connexion à la base de données
   try
   {
@@ -30,14 +32,10 @@
   }
 
 
+  $im = new Image($url, $description, $titre, $url);
 
-  $req = $bdd->prepare('INSERT INTO image(url, description, date, titre) VALUES(:url, :description, :date, :titre)');
-  $req->execute(array(
-    'url' => $url,
-    'description' => $description,
-    'date' => $date,
-    'titre' => $titre,
-    ));
+  $req = $bdd->prepare($im->getinsert());
+  $req->execute($im->getarray());
 
   w_log($titre, $url, $description);
 

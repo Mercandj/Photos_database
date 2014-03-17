@@ -74,7 +74,7 @@ $_SESSION['age'] = 24;
 
 	<footer>
 		<center>
-			<form name="login_form" method="POST" action="/projects/photos/php/add.php">
+			<form name="login_form" method="POST" action="/projects/photos_database/php/add.php">
 				<input type="text" class="saisie" placeholder="URL" style="border-style:none;" name="url" required> 
 				<input type="text" class="saisie" placeholder="Description" style="border-style:none;" name="description" required>
 				<input type="text" class="saisie" placeholder="Titre" style="border-style:none;" name="titre" required>
