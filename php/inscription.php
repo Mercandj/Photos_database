@@ -13,7 +13,7 @@ include 'class/Utilisateur.php';
     die('Erreur : '.$e->getMessage());
   }
 
-  $nom = $_POST['nom'];
+  $nom = $_POST['user'];
   $pass = $_POST['pass'];
   $email = $_POST['email'];
 
@@ -23,7 +23,7 @@ include 'class/Utilisateur.php';
   $req->execute($us->getarray());
 
 
-  echo 'Felicitations, vous avez bien ete enregistre';
+  echo 'Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password';
 
 
   
