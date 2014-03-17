@@ -19,7 +19,7 @@
 
 
 			<center>
-				<form name="login_form" method="POST" action="/projects/photos_database/php/pass.php">
+				<form name="login_form" method="POST" action="./php/pass.php">
 					<input type="text" class="saisie-lg" placeholder="Username" style="border-style:none;" name="user" required> <br/>
 					<input type="password" class="saisie-lg" placeholder="Password" style="border-style:none;" name="pass" required> <br/>
 					<input type="text" class="saisie-lg" placeholder="Email" style="border-style:none;" name="email" required> <br/>

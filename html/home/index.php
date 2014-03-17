@@ -30,8 +30,6 @@ $_SESSION['age'] = 24;
 			
 			<div class="pt">
 
-				
-
 				<?php
 					include("../../php/affiche_base_image.php");
 					echo affiche_base_image();
@@ -45,10 +43,12 @@ $_SESSION['age'] = 24;
 
 	<footer>
 		<center>
-			<form name="login_form" method="POST" action="/projects/photos_database/php/add.php">
+			<form name="login_form" method="POST" action="./../../php/add.php" enctype="multipart/form-data">
 				<input type="text" class="saisie" placeholder="URL" style="border-style:none;" name="url" required> 
 				<input type="text" class="saisie" placeholder="Description" style="border-style:none;" name="description" required>
 				<input type="text" class="saisie" placeholder="Titre" style="border-style:none;" name="titre" required>
+				<input type="file" name="image" />
+     			<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
 				<input type="submit" class="button" style="border-style:none;" value="Submit">
 			</form>
 		</center>

@@ -23,9 +23,8 @@
 
         <br/>
           <h3>
-            <strong>Titre</strong>
-              '.$donnees['titre'].'<br />
-              <strong>Description</strong>'. $donnees['description'].'
+            <strong>Titre </strong>'.$donnees['titre'].'<br />
+              <strong>Description </strong>'.$donnees['description'].'
           </h3>
           <p>
       </div>';

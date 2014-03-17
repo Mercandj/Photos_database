@@ -27,3 +27,6 @@
 17-03-2014 17:59  TITRE:tata  URL:http://fr.openclassrooms.com/  DESCRIPTION:toto
 17-03-2014 18:04  TITRE:tata2  URL:http://mercandalli.com/Images/Mercand.png  DESCRIPTION:toto2
 17-03-2014 18:07  LOGIN:OK  USER:user  PASS:user
+17-03-2014 18:11  LOGIN:OK  USER:user  PASS:user
+17-03-2014 18:23  TITRE:re  URL:re  DESCRIPTION:re
+17-03-2014 18:29  LOGIN:OK  USER:user  PASS:user

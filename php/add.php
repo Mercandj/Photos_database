@@ -2,7 +2,7 @@
 <?php 
 
 include 'inc/log.php';
-include 'Image.php';
+include 'class/Image.php';
 
   function w_log($titre, $url, $description) {
     $date = date("d-m-Y");
