@@ -30,41 +30,12 @@ $_SESSION['age'] = 24;
 			
 			<div class="pt">
 
+				
+
 				<?php
-					// Connexion à la base de données
-					try
-					{
-						$bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
-					}
-					catch(Exception $e)
-					{
-						die('Erreur : '.$e->getMessage());
-					}
-
-					// On récupère tt
-					$req = $bdd->query('SELECT * FROM `image` WHERE 1');
-
-					while ($donnees = $req->fetch())
-					{
-						?>
-						<div>
-						    
-						    <a href=<?php echo $donnees['url']; ?>>
-								<img src=<?php echo $donnees['url']; ?> width="200" height="200" alt="im" />
-							</a>
-
-							<br/>
-							<h3>
-								<strong>Titre</strong>
-							    <?php echo htmlspecialchars($donnees['titre']); ?><br />
-							    <strong>Description</strong>
-							    <?php echo $donnees['description']; ?>
-						    </h3>
-						    <p>
-						</div>
-						<?php
-					} // Fin de la boucle
-					$req->closeCursor();
+					include("../../php/affiche_base_image.php");
+					echo affiche_base_image();
+					
 				?>
 
 			</div>
