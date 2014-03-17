@@ -39,7 +39,7 @@ include 'Image.php';
 
   w_log($titre, $url, $description);
 
-  echo 'Le jeu a bien été ajouté !';
+  echo 'L\'image a bien été ajoutée !';
 
 
   
