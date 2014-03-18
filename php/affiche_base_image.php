@@ -13,7 +13,9 @@
     }
 
     // On récupère tt
-    $req = $bdd->query('SELECT * FROM `image` WHERE 1');
+
+    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=?');
+	$req->execute(array($_SESSION['user']));
 
     while ($donnees = $req->fetch())
     {
