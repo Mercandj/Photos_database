@@ -1,11 +1,12 @@
 <?php
-// On démarre la session AVANT d'écrire du code HTML
-session_start();
- 
-// On s'amuse à créer quelques variables de session dans $_SESSION
-$_SESSION['prenom'] = 'Jean';
-$_SESSION['nom'] = 'Dupont';
-$_SESSION['age'] = 24;
+	// On démarre la session AVANT d'écrire du code HTML
+	session_start();
+	
+	// On s'amuse à créer quelques variables de session dans $_SESSION
+	if($_SESSION['user']==null) {
+		echo 'Session non activée';
+		header("Location: ./../../index.html");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@ $_SESSION['age'] = 24;
 
 	<header>
 		<div class="header_texte">
-			home 
+			home : <?php echo $_SESSION['user']; ?>
 		</div>
 	    
 	</header>
