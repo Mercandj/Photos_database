@@ -22,7 +22,7 @@
 				<form name="login_form" method="POST" action="./../../php/inscription.php">
 					<input type="text" class="saisie-lg" placeholder="Username" style="border-style:none;" name="user" required> <br/>
 					<input type="password" class="saisie-lg" placeholder="Password" style="border-style:none;" name="pass" required> <br/>
-					<input type="text" class="saisie-lg" placeholder="Email" style="border-style:none;" name="email" required> <br/>
+					<input type="email" class="saisie-lg" placeholder="Email" style="border-style:none;" name="email" required> <br/>
 					<input type="submit" class="button" style="border-style:none;" value="Submit Login"> <br/>
 				</form>
     			<a href="../../index.html">Retour</a>
