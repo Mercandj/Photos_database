@@ -2,6 +2,8 @@
 <?php 
 
 include 'class/Utilisateur.php';
+include 'inc/check_db.php';
+include 'inc/message.php';
 
   // Connexion à la base de données
   try
@@ -17,13 +19,19 @@ include 'class/Utilisateur.php';
   $pass = $_POST['pass'];
   $email = $_POST['email'];
 
-  $us = new Utilisateur($nom, $pass, $email);
+  if(utilisateur_existant($nom))
+  {
+	affiche_message('Ce nom d\'utilisateur est deja pris','./../html/inscription');
+  }
+  else
+  {
+	  $us = new Utilisateur($nom, $pass, $email);
 
-  $req = $bdd->prepare($us->getinsert());
-  $req->execute($us->getarray());
+	  $req = $bdd->prepare($us->getinsert());
+	  $req->execute($us->getarray());
+	affiche_message('Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password','./../');
 
-
-  echo 'Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password';
+	}
 
 
   
