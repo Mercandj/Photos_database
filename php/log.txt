@@ -45,3 +45,7 @@
 18-03-2014 15:01  TITRE:faitout  URL:./../../bdd_images/unnamed.png.png  DESCRIPTION:faitout
 18-03-2014 15:02  TITRE:te  URL:./../../bdd_images/unnamed.png.png  DESCRIPTION:te
 18-03-2014 15:03  TITRE:Faitout  URL:./../../bdd_images/unnamed.png.png  DESCRIPTION:Faitout
+18-03-2014 15:10  LOGIN:OK  USER:user  PASS:user
+18-03-2014 15:25  LOGIN:OK  USER:user  PASS:user
+18-03-2014 15:26  LOGIN:OK  USER:user  PASS:user
+18-03-2014 15:28  LOGIN:OK  USER:user  PASS:user
