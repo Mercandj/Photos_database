@@ -15,11 +15,12 @@
     private $Utilisateur_nom = "rien";
     private $Categorie_nom = "rien";
 
-    public function __construct($purl, $pdescription, $ptitre, $pdate) {
+    public function __construct($purl, $pdescription, $ptitre, $pdate, $pUtilisateur_nom) {
       $this->url = $purl;
       $this->description = $pdescription;
       $this->titre = $ptitre;
       $this->date = $pdate;
+      $this->Utilisateur_nom = $pUtilisateur_nom;
     }
 
     public function getarray() {
@@ -33,7 +34,7 @@
         'note' => $this->note,
         'commentaire' => $this->url,
         'date' => $this->date,
-        'Utilisateur_nom' => $this->url,
+        'Utilisateur_nom' => $this->Utilisateur_nom,
         'Categorie_nom' => $this->url,
       );
     }

@@ -26,24 +26,25 @@ include 'class/Image.php';
   $image_sizes = getimagesize($_FILES['image']['tmp_name']);
   if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "Image trop grande";
 
-  /*
-  if(file_exists('./fichier/1/')) {
-    //Créer un dossier 'fichiers/1/'
-    mkdir('./fichier/1/', 0777, true);
-  }
-  */
+  
+  if(!isset($_SESSION))
+    session_start();
+  
 
+  //Créer un dossier
+  @mkdir('./../bdd_images/'.$_SESSION['user'].'/', 0777, true);
+ 
   //Créer un identifiant difficile à deviner
   $nom = md5(uniqid(rand(), true));
 
-  $nom = "./../bdd_images/".$_FILES['image']['name'].".{$extension_upload}";
+  $nom = "./../bdd_images/".$_SESSION['user'].'/'.$_FILES['image']['name']/*.".{$extension_upload}"*/;
   $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
   if ($resultat) echo "Transfert réussi";
 
 
   $date = date("Y-d-m");
   $titre = $_POST['titre'];
-  $url = "./../../bdd_images/".$_FILES['image']['name'].".{$extension_upload}";//$_POST['url'];
+  $url = "./../../bdd_images/".$_SESSION['user'].'/'.$_FILES['image']['name']/*.".{$extension_upload}"*/;//$_POST['url'];
   $description = $_POST['description'];
 
   $note = 0;
@@ -56,9 +57,8 @@ include 'class/Image.php';
     die('Erreur : '.$e->getMessage());
   }
 
-
   // Création d'une image
-  $im = new Image($url, $description, $titre, $url);
+  $im = new Image($url, $description, $titre, $url, $_SESSION['user']);
 
   // INSERT de l'image dans la base de données
   $req = $bdd->prepare($im->getinsert());

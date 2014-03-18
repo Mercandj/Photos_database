@@ -17,14 +17,15 @@
 
     while ($donnees = $req->fetch())
     {
-      $res = $res.'<div><a href="'.$donnees['url'].'"> <img src="'.$donnees['url'].'" width="200" height="200" alt="im" /></a>
-        <br/>
-          <h3>
-            <strong>Titre </strong>'.$donnees['titre'].'<br />
-              <strong>Description </strong>'.$donnees['description'].'
-          </h3>
-          <p>
-      </div>';
+      if($donnees['Utilisateur_nom']===$_SESSION['user'])
+        $res = $res.'<div><a href="'.$donnees['url'].'"> <img src="'.$donnees['url'].'" width="200" height="200" alt="im" /></a>
+          <br/>
+            <h3>
+              <strong>Titre </strong>'.$donnees['titre'].'<br />
+                <strong>Description </strong>'.$donnees['description'].'
+            </h3>
+            <p>
+        </div>';
     } // Fin de la boucle
     $req->closeCursor();
 
