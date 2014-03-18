@@ -58,6 +58,20 @@ footer {
 	margin-right: 10px;
 }
 
+.saisie-lg {
+	background: #eef;
+	/*color: #aaa;*/
+	text-align: center;
+	color: #777;
+	width: 300px;
+	height: 30px;
+	top: 20px;
+	font-family:"Calibri";
+	font-size:15px;
+	box-shadow: 0 3px 0 rgba(0,0,0,0.1);
+	margin-right: 10px;
+}
+
 .button {
 	
 	background: #eef;

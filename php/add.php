@@ -26,12 +26,13 @@ include 'class/Image.php';
   $image_sizes = getimagesize($_FILES['image']['tmp_name']);
   if ($image_sizes[0] > $maxwidth OR $image_sizes[1] > $maxheight) $erreur = "Image trop grande";
 
-/*
+  /*
   if(file_exists('./fichier/1/')) {
     //Créer un dossier 'fichiers/1/'
     mkdir('./fichier/1/', 0777, true);
   }
-*/
+  */
+
   //Créer un identifiant difficile à deviner
   $nom = md5(uniqid(rand(), true));
 
@@ -42,7 +43,7 @@ include 'class/Image.php';
 
   $date = date("Y-d-m");
   $titre = $_POST['titre'];
-  $url = $_POST['url'];
+  $url = "./../../bdd_images/".$_FILES['image']['name'].".{$extension_upload}";//$_POST['url'];
   $description = $_POST['description'];
 
   $note = 0;
