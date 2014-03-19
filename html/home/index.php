@@ -21,7 +21,12 @@
 
 	<header>
 		<div class="header_texte">
-			home : <?php echo $_SESSION['user']; ?>
+			
+			<form name="login_form" method="POST" action="./../../php/logout.php" enctype="multipart/form-data">
+				home : <?php echo $_SESSION['user']; ?>&emsp;
+				<input type="submit" class="button" style="border-style:none;" value="Logout">
+			</form>
+
 		</div>
 	    
 	</header>
