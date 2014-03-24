@@ -2,7 +2,7 @@
 <?php 
 class ImageModele {
 
-	public __constructor() {
+	function __construct() {
 
 
 	}
@@ -19,9 +19,25 @@ class ImageModele {
 	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=?');
 		$req->execute(array($_SESSION['user']));
 
-	    while ($donnees = $req->fetch()) { }
+		$table = array();
 
-		return $donnees;
+	    while ($donnees = $req->fetch()) { 
+	    	array_push($table, new Image(
+	    	$donnees['url'],
+	    	$donnees['url_icone'],
+	    	$donnees['description'],
+	    	$donnees['titre'],
+	    	$donnees['taille'],
+	    	$donnees['taille_icone'],
+	    	$donnees['note'],
+	    	$donnees['commentaire'],
+	    	$donnees['date'],
+	    	$donnees['Utilisateur_nom'],
+	    	$donnees['Categorie_nom']
+	    	));
+	    }
+
+		return $table;
 	}
 }
 

@@ -37,8 +37,12 @@
 			<div class="pt">
 
 				<?php
-					include("../../php/affiche_base_image.php");
-					echo affiche_base_image();
+					include './../../php/classe/Image.php';
+					include './../../php/controleur/ImageControleur.php';
+					include './../../php/modele/ImageModele.php';
+					include './../../php/vue/ImageVue.php';
+					$ic = new ImageControleur();
+					echo $ic->getHTML();
 					
 				?>
 
