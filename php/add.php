@@ -1,7 +1,6 @@
 
 <?php 
 
-include 'inc/log.php';
 include 'class/Image.php';
   
   function w_log($titre, $url, $description) {
@@ -64,9 +63,6 @@ include 'class/Image.php';
       // INSERT de l'image dans la base de données
       $req = $bdd->prepare($im->getinsert());
       $req->execute($im->getarray());
-
-      // Ecriture de logs
-      w_log($titre, $url, $description);
 
       echo 'L\'image a bien été ajoutée !';
     }

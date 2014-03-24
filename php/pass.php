@@ -1,5 +1,5 @@
 
-<?php include 'inc/log.php';
+<?php
 
   function w_log($user, $pass, $string) {
     $date = date("d-m-Y");
@@ -24,17 +24,14 @@
     //if it does, then check the password
     if($user_pass_list[$user] == $pass){
       $connect = 'true';
-      w_log($user, $pass, "OK");
       header("Location: ../html/home/index.php");
       die();
         
      }else{
-      w_log($user, $pass, "KO");
       header("Location: ../index.html");
       die();
     }
   }else{
-    w_log($user, $pass, "KO");
     header("Location: ../index.html");
     die();
    }
