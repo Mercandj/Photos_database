@@ -1,13 +1,18 @@
 <?php 
 class ImageControleur {
 
+	ImageModele $im;
+	ImageVue $iv;
+	
 	public __constructor() {
-		ImageModele $im = new ImageModele();
-		ImageVue $iv = new ImageVue($im->getImageListe());
-		echo $iv->genererHTML();
+		$im = new ImageModele();
+		$iv = new ImageVue($im->getImageListe());
 	}
 	
-	
+	function getHTML()
+	{
+		return $iv->genererHTML();
+	}
 }
 
 ?>
