@@ -2,7 +2,7 @@
 <?php 
 class MainControleur {
 
-	public __constructor() {
+	function __construct() {
 
 
 	}

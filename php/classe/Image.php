@@ -68,6 +68,13 @@
         )';
     }
 
+
+    public function getTitre() {
+      return $this->titre;
+    }
+    public function getDescription() {
+      return $this->description;
+    }
     public function getUtilisateur_nom() {
       return $this->Utilisateur_nom;
     }
