@@ -21,7 +21,7 @@ include 'inc/message.php';
 
   if(utilisateur_existant($nom))
   {
-	affiche_message('Ce nom d\'utilisateur est deja pris','./../html/inscription');
+	affiche_message('Ce nom d\'utilisateur est deja pris','./../page/inscription');
   }
   else
   {

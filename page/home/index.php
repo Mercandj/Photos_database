@@ -13,7 +13,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Private Photos</title>
+		<title>Photos Base</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<link rel="stylesheet" type="text/css" href="./../../css/home.css" />
 		<link rel="stylesheet" type="text/css" href="./../../css/table.css" />
@@ -31,12 +31,24 @@
 	<body>	
 
 		<div class="left">
-
 			<div id='cssmenu'>
 				<a><?php echo $_SESSION['user']; ?></a>
 				<a1 >
-					<form name="login_form" method="POST" action="./../../php/logout.php" enctype="multipart/form-data">
-						<input type="submit" class="cssmenu_input" style="border-style:none;" value="Logout">
+					<form name="login_form" method="POST" action="./../../php/controleur/IndexControleur.php" enctype="multipart/form-data">
+						<input type="hidden" name="action" value="Créer catégorie">
+						<input type="submit" class="cssmenu_input" style="border-style:none;" value="Créer catégorie">
+					</form>
+				</a1>
+				<a1 >
+					<form name="login_form" method="POST" action="./../../php/controleur/IndexControleur.php">
+						<input type="hidden" name="action" value="Supprimer tout">
+						<input type="submit" class="cssmenu_input" style="border-style:none;" value="Supprimer tout">
+					</form>
+				</a1>
+				<a1 >
+					<form name="login_form" method="POST" action="./../../php/controleur/IndexControleur.php" enctype="multipart/form-data">
+						<input type="hidden" name="action" value="Quitter">
+						<input type="submit" class="cssmenu_input" style="border-style:none;" value="Quitter">
 					</form>
 				</a1>
 
@@ -69,11 +81,10 @@
 				<input type="text" class="saisie" placeholder="Titre" style="border-style:none;" name="titre" required>
 				<input type="file" class="saisie-lg" style="border-style:none;" name="image" required/>
      			<input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
-				<input type="submit" class="button" style="border-style:none;" value="Submit">
+				<input type="submit" class="button" style="border-style:none;" value="Envoyer">
 			</form>
 		</center>
 	    
 	</footer>
-
 
 </html>

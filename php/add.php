@@ -2,16 +2,6 @@
 <?php 
 
 include 'classe/Image.php';
-  
-  function w_log($titre, $url, $description) {
-    $date = date("d-m-Y");
-    $heure = date("H:i");
-
-    $filename = 'log.txt';
-    $somecontent = $date." ".$heure."  TITRE:".$titre."  URL:".$url."  DESCRIPTION:".$description."\n";
-
-    ecrire_fichier($filename, $somecontent);
-  }
 
   $maxwidth = 200000;
   $maxheight = 200000;
