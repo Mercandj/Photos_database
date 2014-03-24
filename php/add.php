@@ -58,7 +58,19 @@ include 'classe/Image.php';
       }
 
       // Création d'une image
-      $im = new Image($url, $description, $titre, $url, $_SESSION['user']);
+      $im = new Image(
+        $url, 
+        "null",
+        $description, 
+        $titre, 
+        $image_sizes[0].'x'.$image_sizes[1],
+        "null",
+        "null",
+        "null",
+        "null",
+        $_SESSION['user'],
+        "null"
+        );
 
       // INSERT de l'image dans la base de données
       $req = $bdd->prepare($im->getinsert());

@@ -4,23 +4,40 @@
   class Image {
 
     private $url;
-    private $url_icone = "rien";
+    private $url_icone;
     private $description;
     private $titre;
-    private $taille = "rien";
-    private $taille_icone = "rien";
+    private $taille;
+    private $taille_icone;
     private $note = 0;
-    private $commeantaire = "rien";
+    private $commentaire;
     private $date;
-    private $Utilisateur_nom = "rien";
-    private $Categorie_nom = "rien";
+    private $Utilisateur_nom;
+    private $Categorie_nom;
 
-    public function __construct($purl, $pdescription, $ptitre, $pdate, $pUtilisateur_nom) {
+    public function __construct( $purl,
+      $purl_icone,
+      $pdescription,
+      $ptitre,
+      $ptaille,
+      $ptaille_icone,
+      $pnote,
+      $pcommentaire,
+      $pdate,
+      $pUtilisateur_nom,
+      $pCategorie_nom) {
+
       $this->url = $purl;
+      $this->url_icone = $purl_icone;
       $this->description = $pdescription;
       $this->titre = $ptitre;
+      $this->taille = $ptaille;
+      $this->taille_icone = $ptaille_icone;
+      $this->note = $pnote;
+      $this->commentaire = $pcommentaire;
       $this->date = $pdate;
       $this->Utilisateur_nom = $pUtilisateur_nom;
+      $this->Categorie_nom = $pCategorie_nom;
     }
 
     public function getarray() {
@@ -29,13 +46,13 @@
         'url_icone' => $this->url_icone,
         'description' => $this->description,
         'titre' => $this->titre,
-        'taille' => $this->url,
-        'taille_icone' => $this->url,
+        'taille' => $this->taille,
+        'taille_icone' => $this->taille_icone,
         'note' => $this->note,
-        'commentaire' => $this->url,
+        'commentaire' => $this->commentaire,
         'date' => $this->date,
         'Utilisateur_nom' => $this->Utilisateur_nom,
-        'Categorie_nom' => $this->url,
+        'Categorie_nom' => $this->Categorie_nom,
       );
     }
 
@@ -71,6 +88,9 @@
 
     public function getTitre() {
       return $this->titre;
+    }
+    public function getTaille() {
+      return $this->taille;
     }
     public function getDescription() {
       return $this->description;

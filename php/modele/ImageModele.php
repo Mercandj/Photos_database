@@ -4,7 +4,6 @@ class ImageModele {
 
 	function __construct() {
 
-
 	}
 
 	function getImageListe() {
@@ -15,7 +14,6 @@ class ImageModele {
 	    }
 
 	    // On récupère tt
-
 	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=?');
 		$req->execute(array($_SESSION['user']));
 

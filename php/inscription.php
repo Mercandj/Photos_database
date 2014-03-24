@@ -1,7 +1,7 @@
 
 <?php 
 
-include 'class/Utilisateur.php';
+include 'classe/Utilisateur.php';
 include 'inc/check_db.php';
 include 'inc/message.php';
 

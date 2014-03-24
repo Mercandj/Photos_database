@@ -16,25 +16,37 @@
 		<title>Private Photos</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<link rel="stylesheet" type="text/css" href="./../../css/home.css" />
+		<link rel="stylesheet" type="text/css" href="./../../css/table.css" />
+		<link rel="stylesheet" type="text/css" href="./../../css/left_menu.css" />
 	</head>
 	
 
 	<header>
 		<div class="header_texte">
-			
-			<form name="login_form" method="POST" action="./../../php/logout.php" enctype="multipart/form-data">
-				home : <?php echo $_SESSION['user']; ?>&emsp;
-				<input type="submit" class="button" style="border-style:none;" value="Logout">
-			</form>
-
+			photos-base
 		</div>
 	    
 	</header>
 
 	<body>	
-		<div class="pt-main">
-			
+
+		<div class="left">
+
+			<div id='cssmenu'>
+				<a><?php echo $_SESSION['user']; ?></a>
+				<a1 >
+					<form name="login_form" method="POST" action="./../../php/logout.php" enctype="multipart/form-data">
+						<input type="submit" class="cssmenu_input" style="border-style:none;" value="Logout">
+					</form>
+				</a1>
+
+			</div>
+		</div>
+		<div class="right">
+				
 			<div class="pt">
+
+				<h2>Voici vos photos !</h2>
 
 				<?php
 					include './../../php/classe/Image.php';
@@ -47,7 +59,6 @@
 				?>
 
 			</div>
-
 		</div>
 	</body>
 

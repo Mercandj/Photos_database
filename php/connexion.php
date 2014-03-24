@@ -29,7 +29,7 @@
 		w_log($user, $pass, "OK");
 		session_start();
 		$_SESSION['user'] = $user;
-		header("Location: ../html/home/index.php");
+		header("Location: ../page/home/index.php");
 	}
 	else
 	{
