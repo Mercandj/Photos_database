@@ -2,25 +2,22 @@ header {
 	position: fixed;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	background-color: #222;
-	font-size: 10pt;
+	background-color: #3B5998;
 	width: 100%;
-	height: 11.0vh;
+	height: 10.5vh;
 	left: 0;
 	top: 0;
 	box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+	z-index: 1000;
 }
 
 
 .header_texte {
-
 	text-align: center;
-	
 	color:#fff;
-
 	font-family:"Calibri";
 	font-weight: 300;
-	font-size: 11.0vh;
+	font-size: 9.0vh;
 	line-height: 1;
 	letter-spacing: 4px;
 	width: 100%;
@@ -28,7 +25,6 @@ header {
 	text-align: center;
 	text-transform: uppercase;
 	word-spacing: -0.3em;
-
 }
 
 footer {
@@ -134,4 +130,171 @@ h3 {
 
 h3 strong {
 	color: rgba(0,0,0,0.7);
+}
+
+
+
+
+
+
+
+
+#cssmenu {
+  background: #333;
+  list-style: none;
+  margin-left: 0px;
+  padding: 0;
+  width: 10em;
+}
+#cssmenu a {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  padding: 10px 9px;
+  text-decoration: none;
+  font-weight: normal;
+}
+#cssmenu a1 {
+  background: #333;
+  border-bottom: 1px solid #393939;
+  color: #ccc;
+  display: block;
+  margin: 0;
+  padding: 10px 9px;
+  text-decoration: none;
+  font-weight: normal;
+}
+#cssmenu a1:hover {
+  background: #2580a2 url('./../image/hover.gif') left center no-repeat;
+  color: #fff;
+  padding-bottom: 8px;
+}
+
+
+.left {
+  position: fixed;
+  color: #000;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  left: 0px;
+  line-height: 16px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 14.0vh;/*100px;*/
+  outline-color: #000;
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  text-decoration: none;
+  top: 0px;
+  width: 255px;
+}
+
+/*
+.right {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: url('./../image/builder_bg_graph.png');
+  background-origin: padding-box;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  background-size: auto auto;
+  box-shadow: #888 0px 0px 5px 0px;
+  color: #000;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 16px;
+  margin-bottom: 0px;
+  margin-left: 10.3em;
+  margin-right: 0px;
+  margin-top: 0px;
+  min-height: 0px;
+  outline-color: #000;
+  outline-style: none;
+  outline-width: 0px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+}
+*/
+
+.right {
+  margin-bottom: 0px;
+  margin-left: 10.3em;
+  margin-right: 0px;
+  margin-top: 0px;
+  min-height: 0px;
+  outline-color: #000;
+  outline-style: none;
+  outline-width: 0px;
+}
+
+.affichage {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color:#F0EFE7;
+
+  background-origin: padding-box;
+  background-position: 0% 0%;
+  background-size: auto auto;
+  box-shadow: #888 0px 0px 5px 0px;
+  color: #000;
+
+
+
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 16px;
+  outline-color: #000;
+  outline-style: none;
+  outline-width: 0px;
+
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  position: relative;
+}
+
+.affichage-cover {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: url('./../image/builder_bg_graph.png');
+  background-origin: padding-box;
+  background-position: 0% 0%;
+  background-size: auto auto;
+  /*box-shadow: #888 0px 0px 5px 0px;*/
+  color: #000;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 16px;
+  outline-color: #000;
+  outline-style: none;
+  outline-width: 0px;
+
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  position: relative;
+
+  height: 350px;
+}
+
+.cssmenu_input {
+  background: transparent;
+  color: #ccc;
 }

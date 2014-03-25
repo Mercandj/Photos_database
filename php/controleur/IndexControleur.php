@@ -7,10 +7,10 @@ $action = $_POST['action'];
 
 switch($action) {
 	case "Créer catégorie" :
-		echo "cool";
+		echo "Créer catégorie";
 	break;
 	case "Supprimer tout" :
-		echo "cool";
+		echo "Supprimer tout";
 	break;
 	case "Quitter" :
 		logout();

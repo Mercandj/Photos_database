@@ -24,21 +24,27 @@ include 'classe/Image.php';
       // Créer un dossier
       @mkdir('./../bdd_images/'.$_SESSION['user'].'/', 0777, true);
      
-      // Créer un identifiant difficile à deviner
-      $nom = md5(uniqid(rand(), true));
 
-      $nom = "./../bdd_images/".$_SESSION['user'].'/'.$_FILES['image']['name']/*.".{$extension_upload}"*/;
-      $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nom);
+      $date_heure = date("Y-d-m_h-i-s");
+
+      // Enregistre le fichier image
+      $url = "./../bdd_images/".$_SESSION['user'].'/'.$date_heure.'_'.$_FILES['image']['name']/*.".{$extension_upload}"*/;
+      $resultat = move_uploaded_file($_FILES['image']['tmp_name'], $url);
       if ($resultat) echo "Transfert réussi";
 
+      // Création de l'icone
+      $icone_url = "./../bdd_images/".$_SESSION['user'].'/icone_'.$date_heure.'_'.$_FILES['image']['name'];
+      $icone = new Image(null,null,null,null,null,null,null,null,null,null,null); 
+      $icone->load($url); 
+      $icone->resize(600,400); 
+      $icone->save($icone_url);
 
+      // Création des attributs de l'image
       $date = date("Y-d-m");
       $titre = $_POST['titre'];
-      $url = "./../../bdd_images/".$_SESSION['user'].'/'.$_FILES['image']['name']/*.".{$extension_upload}"*/;//$_POST['url'];
       $description = $_POST['description'];
-
       $note = 0;
-      
+
       // Connexion à la base de données
       try {
         $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
@@ -50,7 +56,7 @@ include 'classe/Image.php';
       // Création d'une image
       $im = new Image(
         $url, 
-        "null",
+        $icone_url,
         $description, 
         $titre, 
         $image_sizes[0].'x'.$image_sizes[1],

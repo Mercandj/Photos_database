@@ -9,9 +9,14 @@ class ImageControleur {
 		$this->iv = new ImageVue($this->im->getImageListe());
 	}
 	
-	function getHTML()
+	function getHTML_table()
 	{
-		return $this->iv->genererHTML();
+		return $this->iv->genererHTML_table();
+	}
+
+	function getHTML_carousel()
+	{
+		return $this->iv->getHTML_carousel();
 	}
 }
 
