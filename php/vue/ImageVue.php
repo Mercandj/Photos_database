@@ -1,5 +1,6 @@
 
 <?php 
+include 'Carousel.php';
 class ImageVue {
 
 	private $liste_images;
@@ -26,6 +27,15 @@ class ImageVue {
         <td class="table_taille">
           <a class="table_description" title="'.$image->getTaille().'" href="./.'.$image->getUrl().'">'.$image->getTaille().' px</a>
         </td>
+        <td class="table_action_1">
+          <a>
+            <form name="login_form" method="POST" action="./../../php/controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Supprimer fichier">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="submit" class="cssmenu_input" style="border-style:none;" value="Supprimer">
+            </form>
+          </a>
+        </td>
       </tr>
       ';
       
@@ -35,13 +45,8 @@ class ImageVue {
   }
 
   function getHTML_carousel() {
-    $res = '';
-    $i = 1;
-    foreach($this->liste_images as $image) {
-      $res .= '<li style="height: 200px; width: 200px;"><img src="./.'.$image->getUrlIcone().'" alt="Image '.$i.'"></li>';
-      $i++;
-    }
-    return $res;
+    $var = new Carousel($this->liste_images);
+    return $var->getHTML_carousel();
   }
 }
 ?>

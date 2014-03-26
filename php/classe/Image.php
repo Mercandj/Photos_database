@@ -108,9 +108,10 @@
       return $this->Categorie_nom;
     }
 
-    var $image; var $image_type;
+    var $image; var $image_type; var $filename;
 
     function load($filename) {   
+      $this->filename = $filename;
       $image_info = getimagesize($filename); 
       $this->image_type = $image_info[2]; 
       if( $this->image_type == IMAGETYPE_JPEG ) {   
@@ -121,7 +122,7 @@
       } 
       elseif( $this->image_type == IMAGETYPE_PNG ) {   
         $this->image = imagecreatefrompng($filename); 
-      } 
+      }
     } 
 
     function save($filename, $image_type=IMAGETYPE_JPEG, $compression=75, $permissions=null) {   
@@ -145,7 +146,7 @@
     function getHeight() {   
       return imagesy($this->image); 
     } 
-    function resize($width,$height) { 
+    function resize($width,$height) {
       $new_image = imagecreatetruecolor($width, $height); 
       imagecopyresampled($new_image, $this->image, 0, 0, 0, 0, $width, $height, $this->getWidth(), $this->getHeight()); 
       $this->image = $new_image; 

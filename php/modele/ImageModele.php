@@ -34,7 +34,7 @@ class ImageModele {
 	    	$donnees['Categorie_nom']
 	    	));
 	    }
-
+	    $req = null;
 		return $table;
 	}
 }

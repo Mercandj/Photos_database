@@ -11,7 +11,6 @@ header {
 	z-index: 1000;
 }
 
-
 .header_texte {
 	text-align: center;
 	color:#fff;
@@ -69,9 +68,7 @@ footer {
 }
 
 .button {
-	
 	background: #eef;
-	/*color: #aaa;*/
 	color: #777;
 	width: 130px;
 	margin-top: 15px;
@@ -85,8 +82,6 @@ body {
 	margin-top: 14.0vh;
 	margin-bottom: 8%;
 }
-
-
 
 h1 {
 	font-family:"Calibri";
@@ -119,7 +114,6 @@ h2 {
 	text-align: left;
 }
 
-
 h3 {
 	margin-top: 10px;
 	color: rgba(0,0,0,0.4);
@@ -131,12 +125,6 @@ h3 {
 h3 strong {
 	color: rgba(0,0,0,0.7);
 }
-
-
-
-
-
-
 
 
 #cssmenu {
@@ -172,7 +160,6 @@ h3 strong {
   padding-bottom: 8px;
 }
 
-
 .left {
   position: fixed;
   color: #000;
@@ -197,37 +184,6 @@ h3 strong {
   width: 255px;
 }
 
-/*
-.right {
-  background-attachment: scroll;
-  background-clip: border-box;
-  background-color: transparent;
-  background-image: url('./../image/builder_bg_graph.png');
-  background-origin: padding-box;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  background-size: auto auto;
-  box-shadow: #888 0px 0px 5px 0px;
-  color: #000;
-  font-family: 'Open Sans',sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 16px;
-  margin-bottom: 0px;
-  margin-left: 10.3em;
-  margin-right: 0px;
-  margin-top: 0px;
-  min-height: 0px;
-  outline-color: #000;
-  outline-style: none;
-  outline-width: 0px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 15px;
-}
-*/
-
 .right {
   margin-bottom: 0px;
   margin-left: 10.3em;
@@ -249,8 +205,6 @@ h3 strong {
   background-size: auto auto;
   box-shadow: #888 0px 0px 5px 0px;
   color: #000;
-
-
 
   font-family: 'Open Sans',sans-serif;
   font-size: 16px;

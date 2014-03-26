@@ -24,13 +24,11 @@ include 'classe/Image.php';
       // Créer un dossier
       @mkdir('./../bdd_images/'.$_SESSION['user'].'/', 0777, true);
      
-
       $date_heure = date("Y-d-m_h-i-s");
 
       // Enregistre le fichier image
       $url = "./../bdd_images/".$_SESSION['user'].'/'.$date_heure.'_'.$_FILES['image']['name']/*.".{$extension_upload}"*/;
       $resultat = move_uploaded_file($_FILES['image']['tmp_name'], $url);
-      if ($resultat) echo "Transfert réussi";
 
       // Création de l'icone
       $icone_url = "./../bdd_images/".$_SESSION['user'].'/icone_'.$date_heure.'_'.$_FILES['image']['name'];
@@ -72,7 +70,7 @@ include 'classe/Image.php';
       $req = $bdd->prepare($im->getinsert());
       $req->execute($im->getarray());
 
-      echo 'L\'image a bien été ajoutée !';
+      header("Location: ./../page/home/index.php");
     }
     else {
       echo "Image trop grande";

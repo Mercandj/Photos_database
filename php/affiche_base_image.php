@@ -33,27 +33,8 @@
             </h3>
             <p>
         </div>';
-        
-        /*$res .= '
-        <tr>
-            <td class="image_url">
-              <img class="imade_url" width="16" height="16" src="'.$donnees['url'].'"></img>
-            </td>
-            <td class="image_titre">
-              <a class="image_titre" title="'.$donnees['titre'].'" href="'.$donnees['url'].'"></a>
-            </td>
-            <td class="image_description">
-              <a class="image_description" title="'.$donnees['description'].'" href="'.$donnees['url'].'"></a>
-            </td>
-
-        </tr>
-        ';
-*/
 
       }
-    //</table>
-
-
 
     } // Fin de la boucle
     $req->closeCursor();
