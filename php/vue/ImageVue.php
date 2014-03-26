@@ -16,7 +16,7 @@ class ImageVue {
       $res = $res.'
       <tr>
         <td class="table_image">
-          <img class="imade_url" width="32" height="32" src="./.'.$image->getUrl().'"></img>
+          <img class="imade_url" width="40" height="40" src="./.'.$image->getUrl().'"></img>
         </td>
         <td class="table_titre">
           <a class="table_titre" title="'.$image->getTitre().'" href="./.'.$image->getUrl().'">'.$image->getTitre().'</a>

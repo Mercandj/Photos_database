@@ -67,14 +67,16 @@
 				echo $ic->getHTML_carousel();
 			?>
 
-			<br/>
-
 			<div class="affichage">
 				<h2>Voici vos photos !</h2>
 				<?php
 					$ic = new ImageControleur();
 					echo $ic->getHTML_table();
 				?>
+
+
+				<h3>Information</h3>
+				<p>Poster au moins 6 photos pour débloquer la galerie.</p>
 			</div>
 
 		</div>

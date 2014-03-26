@@ -6,7 +6,11 @@ include 'classe/Image.php';
   $maxwidth = 200000;
   $maxheight = 200000;
 
-  if ($_FILES['image']['error'] > 0) $erreur = "Erreur lors du transfert";
+  if ($_FILES['image']['error'] > 0) {
+    $erreur = "Erreur lors du transfert";
+    echo $erreur;
+    return;
+  }
   if ($_FILES['image']['size'] > 1048576) $erreur = "Le fichier est trop gros";
   $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
   $extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')  ,1)  );

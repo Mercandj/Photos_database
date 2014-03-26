@@ -30,7 +30,7 @@ class Carousel {
           $i++;
         }
          $res .='</p>
-              </div>';
+              </div><br/>';
     }
     return $res;
   }
