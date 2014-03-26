@@ -5,7 +5,7 @@ Gestionnaire de photos
 
 #### Homepage
 <p align="center">
-<img src="https://raw.github.com/Mercandj/Photos_database/master/Screenshot/1.png" width="720" />
+<img src="https://raw.github.com/Mercandj/Photos_database/master/screenshot/1.png" width="720" />
 </p>
 
 
