@@ -8,21 +8,17 @@
 	</head>
 	
 	<body>	
-
 		<h1><strong>PHOTOS</strong> BASE</h1>
-
 		<div class="pt-main">
-				
-				<h2>Member Login :</h2>
-
-				<center>
-					<form name="login_form" method="POST" action="./php/connexion.php">
-						<input type="text" class="saisie" placeholder="Username" style="border-style:none;" name="user" required> 
-						<input type="password" class="saisie" placeholder="Password" style="border-style:none;" name="pass" required><br/>
-						<input type="submit" class="button" style="border-style:none;" value="Submit Login"><br/>
-					</form>
-	    			<a href="page/inscription/index.php">Inscription</a>
-	    		</center>
+			<h2>Connectez-vous :</h2>
+			<center>
+				<form name="login_form" method="POST" action="./php/connexion.php">
+					<input type="text" class="saisie" placeholder="Pseudo" style="border-style:none;" name="user" required> 
+					<input type="password" class="saisie" placeholder="Mot de passe" style="border-style:none;" name="pass" required><br/>
+					<input type="submit" class="button" style="border-style:none;" value="Connexion"><br/>
+				</form>
+    			<a href="php/vue/inscription/index.php">Inscription</a>
+    		</center>
 		</div>
 	</body>
 </html>

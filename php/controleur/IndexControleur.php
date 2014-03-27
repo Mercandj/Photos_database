@@ -7,19 +7,22 @@ include "./../inc/supprimer.php";
 $action = $_POST['action'];
 
 switch($action) {
+	case "Accueil" :
+		header("Location: ./../vue/home/index.php");
+	break;
 	case "Créer catégorie" :
-		echo "Créer catégorie";
+		header("Location: ./../vue/creer_categorie");
 	break;
 	case "Supprimer tout" :
 		supprimer_tout();
-		header("Location: ./../../page/home/index.php");
+		header("Location: ./../vue/home/index.php");
 	break;
 	case "Quitter" :
 		logout();
 	break;
 	case "Supprimer fichier" :
 		supprimer_fichier($_POST['url']);
-		header("Location: ./../../page/home/index.php");
+		header("Location: ./../vue/home/index.php");
 	break;
 }
 

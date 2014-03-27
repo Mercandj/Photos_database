@@ -29,12 +29,12 @@
 		w_log($user, $pass, "OK");
 		session_start();
 		$_SESSION['user'] = $user;
-		header("Location: ../page/home/index.php");
+		header("Location: ./vue/home/index.php");
 	}
 	else
 	{
 		w_log($user, $pass, "KO");
 		echo 'Mauvais username ou password';
-		header("Location: ../index.html");
+		header("Location: ./../index.html");
 	}
 ?>

@@ -1,0 +1,4 @@
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "C://Users//JM//Desktop//ESIEE//E4_Web_Dyna//EasyPHP-DevServer-14.1VC9//EasyPHP-DevServer-14.1VC9//data//localweb//projects//Photos_database//bdd_images//user//.htpasswd"
+Require valid-user

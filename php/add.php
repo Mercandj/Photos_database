@@ -74,7 +74,7 @@ include 'classe/Image.php';
       $req = $bdd->prepare($im->getinsert());
       $req->execute($im->getarray());
 
-      header("Location: ./../page/home/index.php");
+      header("Location: ./vue/home/index.php");
     }
     else {
       echo "Image trop grande";
