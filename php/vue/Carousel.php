@@ -16,7 +16,7 @@ class Carousel {
                   <ul style="left: -600px; top: 0px;">';
           $i = 1;
           foreach($this->liste_images as $image) {
-            $res .= '<li style="height: 200px; width: 200px;"><img src="./.'.$image->getUrlIcone().'" alt="Image '.$i.'"></li>';
+            $res .= '<li style="height: 200px; width: 200px;"><img src="./../.'.$image->getUrlIcone().'" alt="Image '.$i.'"></li>';
             $i++;
           }
       $res .='    </ul>
