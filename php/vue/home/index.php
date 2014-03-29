@@ -38,19 +38,31 @@
 				
 			<!-- Carousel -->
 			<?php
-				include './../../classe/Image.php';
-				include './../../controleur/ImageControleur.php';
-				include './../../modele/ImageModele.php';
-				include './../ImageVue.php';
-				$ic = new ImageControleur();
-				echo $ic->getHTML_carousel();
+			include './../../controleur/MainControleur.php';
+				
+			include './../../classe/Image.php';
+			include './../../modele/ImageModele.php';
+			include './../ImageVue.php';
+
+			include './../../classe/Categorie.php';
+			include './../../modele/CategorieModele.php';
+			include './../CategorieVue.php';
+
+			$mc = new MainControleur();
+			echo $mc->getHTML_carousel();
+			?>
+
+			<!-- Categorie -->
+			<?php
+				//$mc = new MainControleur();
+				echo $mc->getHTML_categorie();
 			?>
 
 			<div class="affichage">
 				<h2>Voici vos photos !</h2>
 				<?php
-					$ic = new ImageControleur();
-					echo $ic->getHTML_table();
+					$mc = new MainControleur();
+					echo $mc->getHTML_table();
 				?>
 
 

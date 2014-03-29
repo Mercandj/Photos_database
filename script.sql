@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `Categorie` (
   `nom` VARCHAR(45) NOT NULL,
   `description` VARCHAR(100) NOT NULL,
   `date` DATE NOT NULL,
+  `Utilisateur_nom` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`nom`))
 ENGINE = InnoDB;
 

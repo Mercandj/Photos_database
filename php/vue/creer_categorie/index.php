@@ -31,9 +31,9 @@
 		<div class="right">
 			<div class="affichage">
 				<h2>Nouvelle Catégorie :</h2>
-				<form name="login_form" method="POST" action="./../inscription.php">
+				<form name="login_form" method="POST" action="./../../modele/creer_categorie.php">
 					<input type="text" class="saisie-lg" placeholder="Nom" style="border-style:none;" name="nom" required> <br/>
-					<input type="password" class="saisie-lg" placeholder="Description" style="border-style:none;" name="description"> <br/>
+					<input type="text" class="saisie-lg" placeholder="Description" style="border-style:none;" name="description"> <br/>
 					<input type="submit" class="button-lg" style="border-style:none;" value="Créer"> <br/>
 				</form>
 			</div>

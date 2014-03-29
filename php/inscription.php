@@ -2,7 +2,7 @@
 <?php 
 
 include 'classe/Utilisateur.php';
-include 'inc/check_db.php';
+include 'inc/check_utilisateur_db.php';
 include 'inc/message.php';
 
   // Connexion à la base de données
@@ -21,7 +21,7 @@ include 'inc/message.php';
 
   if(utilisateur_existant($nom))
   {
-	affiche_message('Ce nom d\'utilisateur est deja pris','./../page/inscription');
+	affiche_message('Ce nom d\'utilisateur est deja pris','./vue/inscription');
   }
   else
   {
@@ -29,7 +29,7 @@ include 'inc/message.php';
 
 	  $req = $bdd->prepare($us->getinsert());
 	  $req->execute($us->getarray());
-	affiche_message('Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password','./../');
+	  affiche_message('Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password','./../');
 
 	}
 
