@@ -9,10 +9,10 @@ class MainControleur {
 	
 	function __construct() {
 		$this->cm = new CategorieModele();
-		$this->cv = new CategorieVue($this->cm->getCategorieListe());
+		$this->cv = new CategorieVueIndex($this->cm->getCategorieListe());
 
 		$this->im = new ImageModele();
-		$this->iv = new ImageVue($this->im->getImageListe(), $this->cm->getCategorieListe());
+		$this->iv = new ImageVueIndex($this->im->getImageListe(), $this->cm->getCategorieListe());
 	}
 	
 	function getHTML_table()

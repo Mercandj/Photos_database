@@ -1,7 +1,7 @@
 
 <?php 
 include 'Carousel.php';
-class ImageVue {
+class ImageVueIndex {
 
 	private $liste_images;
   private $liste_categories;
