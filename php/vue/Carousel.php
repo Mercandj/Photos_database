@@ -19,7 +19,7 @@ class Carousel {
             $res .= '<li style="height: 200px; width: 200px;"><img src="./../.'.$image->getUrlIcone().'" alt="Image '.$i.'"></li>';
             $i++;
           }
-      $res .='    </ul>
+          $res .='</ul>
                 </div>
                 <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-prev">‹</a>
                 <a data-jcarouselcontrol="true" href="#" class="jcarousel-control-next">›</a>

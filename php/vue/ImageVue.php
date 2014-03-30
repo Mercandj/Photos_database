@@ -4,18 +4,34 @@ include 'Carousel.php';
 class ImageVue {
 
 	private $liste_images;
+  private $liste_categories;
 
-	function __construct($pliste_images) {
+	function __construct($pliste_images, $pliste_categories) {
 		$this->liste_images = $pliste_images;
+    $this->liste_categories = $pliste_categories;
 	}
 
 	function genererHTML_table() {
     $res = '<table class="table_fichiers">';
+
+    /* 1ère ligne de la table */
+    if(count($this->liste_images)!=0) {
+      $res = $res.'<tr>
+      <td class="table_image"><a>Icône</a></td>
+      <td class="table_titre"><a>Titre</a></td>
+      <td class="table_description"><a>Description</a></td>
+      <td class="table_taille"><a>Taille</a></td>
+      <td class="table_action_1"><a>Supprimer</a></td>
+      <td class="table_action_2"><a>Categorie</a></td>
+      </tr>
+      ';
+    }
+
     foreach($this->liste_images as $image) {
       $res = $res.'
       <tr>
         <td class="table_image">
-          <img class="imade_url" width="40" height="40" src="./../../'.$image->getUrl().'"></img>
+          <img class="imade_url" width="60" height="40" src="./../../'.$image->getUrlIcone().'"></img>
         </td>
         <td class="table_titre">
           <a class="table_titre" title="'.$image->getTitre().'" href="./../../'.$image->getUrl().'">'.$image->getTitre().'</a>
@@ -35,9 +51,27 @@ class ImageVue {
             </form>
           </a>
         </td>
-      </tr>
-      ';
-      
+        <td class="table_action_2">
+          <a>
+            <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Changer categorie">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <SELECT name="categorie" size="1" onChange="this.location=this.form.submit();">';
+                  foreach($this->liste_categories as $categorie) {
+                    if($categorie->getNom()!="null" && $categorie->getNom()==$image->getCategorie_nom())
+                      $res .='<OPTION value="'.$categorie->getNom().'" selected>'.$categorie->getNom();
+                    else
+                      $res .='<OPTION value="'.$categorie->getNom().'">'.$categorie->getNom();
+                  }
+                  if($image->getCategorie_nom()=='null') $res .='<OPTION value="null" selected>null';
+                  else  $res .='<OPTION value="null">null';
+                  $res .='
+              </SELECT>
+              <noscript><input type="submit" value="Changer" /></noscript>
+            </form>
+          </a>
+        </td>
+      </tr>';
     }
     $res = $res.'</table>';
     return $res;
