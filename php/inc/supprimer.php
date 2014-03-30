@@ -23,7 +23,7 @@ function supprimer_fichier($url) {
 	$req = null;
 }
 
-function supprimer_tout() {
+function supprimer_tout($user) {
 	try {
 		$bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
 	}
@@ -31,14 +31,18 @@ function supprimer_tout() {
 		die('Erreur : '.$e->getMessage());
 	}
 
-	$req = $bdd->prepare('SELECT * FROM `image`');
-	$req->execute();
+	$sql = 'DELETE FROM `mydb`.`categorie` WHERE `categorie`.`Utilisateur_nom` = \''.$user.'\'';
+  	$count = $bdd->exec($sql);
+
+	$req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom` = ?');
+	$req->execute(array($user));
 	while($donnees = $req->fetch()) {
 		unlink('./.'.$donnees['url']);
 		unlink('./.'.$donnees['url_icone']);
-		$sql = 'DELETE FROM image WHERE url=\''.$donnees['url'].'\'';
+		$sql = 'DELETE FROM `image` WHERE `url` = \''.$donnees['url'].'\'';
   		$count = $bdd->exec($sql);
 	}
+	
 	$req = null;
 }
 ?>

@@ -8,10 +8,11 @@ class MainControleur {
 	private $cv;
 	
 	function __construct() {
-		$this->im = new ImageModele();
-		$this->iv = new ImageVue($this->im->getImageListe());
 		$this->cm = new CategorieModele();
 		$this->cv = new CategorieVue($this->cm->getCategorieListe());
+
+		$this->im = new ImageModele();
+		$this->iv = new ImageVue($this->im->getImageListe(), $this->cm->getCategorieListe());
 	}
 	
 	function getHTML_table()
@@ -29,5 +30,4 @@ class MainControleur {
 		return $this->iv->getHTML_carousel();
 	}
 }
-
 ?>
