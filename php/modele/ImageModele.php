@@ -30,6 +30,7 @@ class ImageModele {
 	    	$donnees['note'],
 	    	$donnees['commentaire'],
 	    	$donnees['date'],
+	    	$donnees['visibilite'],
 	    	$donnees['Utilisateur_nom'],
 	    	$donnees['Categorie_nom']
 	    	));
@@ -62,6 +63,7 @@ class ImageModele {
 	    	$donnees['note'],
 	    	$donnees['commentaire'],
 	    	$donnees['date'],
+	    	$donnees['visibilite'],
 	    	$donnees['Utilisateur_nom'],
 	    	$donnees['Categorie_nom']
 	    	));
@@ -94,6 +96,7 @@ class ImageModele {
 	    	$donnees['note'],
 	    	$donnees['commentaire'],
 	    	$donnees['date'],
+	    	$donnees['visibilite'],
 	    	$donnees['Utilisateur_nom'],
 	    	$donnees['Categorie_nom']
 	    	));

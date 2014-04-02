@@ -25,7 +25,8 @@
       $pcommentaire,
       $pdate,
       $pUtilisateur_nom,
-      $pCategorie_nom) {
+      $pCategorie_nom,
+      $pvisibilite) {
 
       $this->url = $purl;
       $this->url_icone = $purl_icone;
@@ -36,6 +37,7 @@
       $this->note = $pnote;
       $this->commentaire = $pcommentaire;
       $this->date = $pdate;
+      $this->visibilite = $pvisibilite;
       $this->Utilisateur_nom = $pUtilisateur_nom;
       $this->Categorie_nom = $pCategorie_nom;
     }
@@ -51,6 +53,7 @@
         'note' => $this->note,
         'commentaire' => $this->commentaire,
         'date' => $this->date,
+        'visibilite' => $this->visibilite,
         'Utilisateur_nom' => $this->Utilisateur_nom,
         'Categorie_nom' => $this->Categorie_nom,
       );
@@ -68,6 +71,7 @@
           note,
           commentaire,
           date,
+          visibilite,
           Utilisateur_nom,
           Categorie_nom
         ) VALUES(
@@ -80,6 +84,7 @@
           :note,
           :commentaire,
           :date,
+          :visibilite,
           :Utilisateur_nom,
           :Categorie_nom
         )';
@@ -109,6 +114,9 @@
     }
     public function getCategorie_nom() {
       return $this->Categorie_nom;
+    }
+    public function getVisibilite() {
+      return $this->visibilite;
     }
 
     var $image; var $image_type; var $filename;

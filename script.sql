@@ -52,9 +52,10 @@ CREATE TABLE IF NOT EXISTS `Image` (
   `titre` VARCHAR(100) NOT NULL,
   `taille` VARCHAR(100) NOT NULL,
   `taille_icone` VARCHAR(100) NOT NULL,
-  `note` INT NOT NULL,
+  `note` DECIMAL(45) NOT NULL,
   `commentaire` VARCHAR(500) NOT NULL,
   `date` DATE NOT NULL,
+  `visibilite` VARCHAR(45) NOT NULL,
   `Utilisateur_nom` VARCHAR(45) NOT NULL,
   `Categorie_nom` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`url`, `Utilisateur_nom`, `Categorie_nom`))
