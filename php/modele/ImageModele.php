@@ -14,7 +14,7 @@ class ImageModele {
 	    }
 
 	    // On récupère tt
-	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? OR `visilite`=public');
+	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? OR `visibilite`=\'public\'');
 		$req->execute(array($_SESSION['user']));
 
 		$table = array();
