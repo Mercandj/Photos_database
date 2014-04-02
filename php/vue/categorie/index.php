@@ -21,13 +21,14 @@
 	include_once './../CategorieVueIndex.php';
 
 	include_once './../CategorieVue.php';
+	include_once './../Carousel.php';
 
 	$categorie_nom = $_GET['categorie'];
 	$im = new ImageModele();
 	$listeImages = $im->getImageListe_Categorie($categorie_nom);
 	$cv = new CategorieVue($listeImages);
 
-	$listeImages = $cv->genererHTML_table();
+	$listeImages_html = $cv->genererHTML_table();
 ?>
 
 <!DOCTYPE html>
@@ -55,15 +56,15 @@
 				
 			<!-- Carousel -->
 			<?php
-			$mc = new MainControleur();
-			echo $mc->getHTML_carousel();
+			$carousel = new Carousel($listeImages);
+			echo $carousel->getHTML_carousel();
 			?>
 
 			<div class="affichage">
 				<h2>Catégorie <?php echo $categorie_nom ?> :</h2>
 
 				<!-- Liste d'image -->
-				<?php echo $listeImages; ?>
+				<?php echo $listeImages_html; ?>
 
 				<h3>Information</h3>
 				<p>Poster au moins 6 photos pour débloquer la galerie.</p>
