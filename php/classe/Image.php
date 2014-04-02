@@ -24,9 +24,9 @@
       $pnote,
       $pcommentaire,
       $pdate,
+      $pvisibilite,
       $pUtilisateur_nom,
-      $pCategorie_nom,
-      $pvisibilite) {
+      $pCategorie_nom) {
 
       $this->url = $purl;
       $this->url_icone = $purl_icone;
