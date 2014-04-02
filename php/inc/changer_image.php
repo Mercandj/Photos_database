@@ -20,7 +20,7 @@ function changer_image_visibilire($url, $visivilite) {
 		die('Erreur : '.$e->getMessage());
 	}
 
-	$req = $bdd->prepare('UPDATE `image` SET `visivilite` = ? WHERE `url` = ?');
+	$req = $bdd->prepare('UPDATE `image` SET `visibilite` = ? WHERE `url` = ?');
 	$req->execute(array($visivilite, $url));
 }
 ?>
