@@ -1,31 +1,29 @@
 <?php 
-class NoteModele {
-
+include '../classe/Note.php';
 	function __construct() {
 
 	}
 
-	function ajouter_note() {
+	function ajouter_note($url, $valeur) {
 		try {
 	      $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
 	    } catch(Exception $e) {
 	      die('Erreur : '.$e->getMessage());
 	    }
-		$valeur = $_POST['valeur'];
-		$image = $_POST['image'];
+		
 		$date = date("Y-d-m");
 		
 		$note = new Note(
 			$valeur, 
 			$date, 
-			$image, 
+			$url, 
 			$_SESSION['user']);
 		
 		$req = $bdd->prepare($note->getinsert());
 		$req->execute($note->getarray());
 		$req = null;
 		
-		updateNoteImage($image, $note->getValeur());
+		updateNoteImage($url, $note->getValeur());
 		
 	}
 	
@@ -67,6 +65,5 @@ class NoteModele {
 			return ($numerateur - $numerateur%$denominateur)/$denominateur +1;
 		}
 	}
-}
 
 ?>

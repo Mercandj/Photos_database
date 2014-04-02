@@ -40,7 +40,7 @@ switch($action) {
 		header("Location: ./../vue/categorie/index.php?categorie=".$_POST['categorie']);
 	break;
 	case "Donner note" :
-		ajouter_note();
+		ajouter_note($_POST['url'],$_POST['note']);
 		header("Location: ./../vue/home/index.php");
 	break;
 	case "Afficher image" :
