@@ -99,7 +99,7 @@ class ImageVueIndex {
 
         <td class="table_action_4">
           <a>';
-            $res .=''.$image->getNote().'"/5'.$i;
+            $res .=''.$image->getNote().'/5';
             $res .='
           </a>
         </td>
