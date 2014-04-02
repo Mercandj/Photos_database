@@ -58,12 +58,12 @@ class ImageVueIndex {
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Changer visibilite">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
-              <SELECT name="categorie" size="1" onChange="this.location=this.form.submit();">';
+              <SELECT name="visibilite" size="1" onChange="this.location=this.form.submit();">';
                   if($image->getVisibilite()==="public") {
-                    $res .='<OPTION value="Public" selected>Public<OPTION value="Private"Private>';
+                    $res .='<OPTION value="Public" selected>Public<OPTION value="Private"Private>Private';
                   }
                   else {
-                    $res .='<OPTION value="Public"><OPTION value="Private" selected>';
+                    $res .='<OPTION value="Public">Public<OPTION value="Private" selected>Private';
                   }
                   $res .='
               </SELECT>
