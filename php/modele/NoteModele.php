@@ -53,22 +53,10 @@ include_once 'ImageModele.php';
 	    }
 		
 		$req = $bdd->prepare('UPDATE `image` SET `note` = ? WHERE `url` = ?');
-		$req->execute(array(arrondi($somme, $counter), $urlImage));
+		$req->execute(array($somme/$counter, $urlImage));
 		
 	    $req = null;
 		return $table;
-	}
-	
-	function arrondi($numerateur, $denominateur)
-	{
-		if(($numerateur%$denominateur)/$denominateur<0.5)
-		{
-			return ($numerateur - $numerateur%$denominateur)/$denominateur;
-		}
-		else
-		{
-			return ($numerateur - $numerateur%$denominateur)/$denominateur +1;
-		}
 	}
 
 ?>
