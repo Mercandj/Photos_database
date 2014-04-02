@@ -43,6 +43,10 @@ switch($action) {
 		ajouter_note();
 		header("Location: ./../vue/home/index.php");
 	break;
+	case "Afficher image" :
+		$url_image = $_POST['url'];
+		header("Location: ./../vue/afficher_image/index.php");
+	break;
 }
 
 ?>
