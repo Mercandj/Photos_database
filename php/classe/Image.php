@@ -101,6 +101,9 @@
     public function getUrl() {
       return $this->url;
     }
+    public function getNote() {
+      return $this->note;
+    }
     public function getUrlIcone() {
       return $this->url_icone;
     }

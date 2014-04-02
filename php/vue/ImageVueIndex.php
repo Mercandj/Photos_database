@@ -23,6 +23,8 @@ class ImageVueIndex {
       <td class="table_taille"><a>Taille</a></td>
       <td class="table_action_1"><a>Supprimer</a></td>
       <td class="table_action_2"><a>Categorie</a></td>
+      <td class="table_action_3"><a>Ma Note</a></td>
+      <td class="table_action_4"><a>Note</a></td>
       </tr>
       ';
     }
@@ -71,6 +73,39 @@ class ImageVueIndex {
             </form>
           </a>
         </td>
+
+        <td class="table_action_3">
+          <a>
+            <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Donner note">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <SELECT name="categorie" size="1" onChange="this.location=this.form.submit();">';
+
+                for($i=0;$i<6;$i++) {
+                  if($image->getNote()===$i) {
+                    $res .='<OPTION value="'.$i.'" selected>'.$i;
+                  }
+                  else {
+                    $res .='<OPTION value="'.$i.'">'.$i;
+                  }
+                }
+                
+                $res .='
+              </SELECT>
+              <noscript><input type="submit" value="Changer" /></noscript>
+            </form>
+          </a>
+        </td>
+
+        <td class="table_action_4">
+          <a>';
+            $res .=''.$image->getNote().'"/5'.$i;
+            $res .='
+          </a>
+        </td>
+
+
+
       </tr>';
     }
     $res = $res.'</table>';
