@@ -28,7 +28,7 @@ else {
 
 	$req = $bdd->prepare($us->getinsert());
 	$req->execute($us->getarray());
-	affiche_message('Felicitations, vous avez bien creer une nouvelle categorie','./../vue/home');
+	affiche_message('Felicitations, vous avez bien créé une nouvelle categorie','./../vue/home');
 
 }
 
