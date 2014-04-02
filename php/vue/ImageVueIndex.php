@@ -34,13 +34,25 @@ class ImageVueIndex {
       $res = $res.'
       <tr>
         <td class="table_image">
-          <img class="imade_url" width="60" height="40" src="./../../'.$image->getUrlIcone().'"></img>
+          <img class="image_url" width="60" height="40" src="./../../'.$image->getUrlIcone().'"></img>
         </td>
         <td class="table_titre">
-          <a class="table_titre" title="'.$image->getTitre().'" href="./../../'.$image->getUrl().'">'.$image->getTitre().'</a>
+          <a>
+            <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Afficher image">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getTitre().'">
+            </form>
+          </a>
         </td>
         <td class="table_description">
-          <a class="table_description" title="'.$image->getDescription().'" href="./../../'.$image->getUrl().'">'.$image->getDescription().'</a>
+          <a>
+            <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Afficher image">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getDescription().'">
+            </form>
+          </a>
         </td>
 
         <td class="table_taille">

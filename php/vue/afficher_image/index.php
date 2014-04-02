@@ -10,17 +10,17 @@
 
 	/*$listeImages = '';*/
 
-	include_once './../../controleur/MainControleur.php';
+	include_once './../controleur/MainControleur.php';
 		
-	include_once './../../classe/Image.php';
-	include_once './../../modele/ImageModele.php';
-	include_once './../ImageVueIndex.php';
+	include_once './../classe/Image.php';
+	include_once './../modele/ImageModele.php';
+	include_once './../vue/ImageVueIndex.php';
 
-	include_once './../../classe/Categorie.php';
-	include_once './../../modele/CategorieModele.php';
-	include_once './../CategorieVueIndex.php';
+	include_once './../classe/Categorie.php';
+	include_once './../modele/CategorieModele.php';
+	include_once './../vue/CategorieVueIndex.php';
 
-	include_once './../CategorieVue.php';
+	include_once './../vue/CategorieVue.php';
 /*
 	$image_url = $_GET['image'];
 	$im = new ImageModele();
@@ -34,14 +34,14 @@
 		<meta charset="UTF-8" />
 		<title>Photos Base</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<link rel="stylesheet" type="text/css" href="./../../../css/home.css" />
-		<link rel="stylesheet" type="text/css" href="./../../../css/table.css" />
+		<link rel="stylesheet" type="text/css" href="./../../css/home.css" />
+		<link rel="stylesheet" type="text/css" href="./../../css/table.css" />
 		<!-- Carousel -->
-		<link rel="stylesheet" type="text/css" href="./../../../carousel/jcarousel.css">
+		<link rel="stylesheet" type="text/css" href="./../../carousel/jcarousel.css">
 	</head>
 
 	<?php
-		include './../header.php';
+		include './../vue/header.php';
 	?>
 
 	<body>	
@@ -49,7 +49,7 @@
 		<!-- Menu de gauche -->
 		<div class="left">
 			<?php
-				include './../menu.php';
+				include './../vue/menu_image.php';
 			?>
 		</div>
 			
@@ -57,23 +57,21 @@
 
 			<div class="affichage">
 				<h2>Photo !</h2>
-				<?php
-					echo $url_image;
-				?>
-
+				
+				<img class="image_url" width="600" height="400" src=<?php echo './../'.$url_image;?> ></img>
 
 				<h3>Information</h3>
-				<p>Poster au moins 6 photos pour débloquer la galerie.</p>
+				<p>Voici votre image.</p>
 			</div>
 
 		</div>
 	</body>
 	<?php
-		include './../footer.php';
+		include './../vue/footer.php';
 	?>
 
-	<script type="text/javascript" src="./../../../carousel/jquery.js"></script>
-	<script type="text/javascript" src="./../../../carousel/jquery_002.js"></script>
-	<script type="text/javascript" src="./../../../carousel/jcarousel.js"></script>
+	<script type="text/javascript" src="./../../carousel/jquery.js"></script>
+	<script type="text/javascript" src="./../../carousel/jquery_002.js"></script>
+	<script type="text/javascript" src="./../../carousel/jcarousel.js"></script>
 
 </html>
