@@ -45,6 +45,7 @@ switch($action) {
 	break;
 	case "Afficher image" :
 		$url_image = $_POST['url'];
+		$description_image = $_POST['description'];
 		include("./../vue/afficher_image/index.php");
 	break;
 	case "Changer visibilite" :

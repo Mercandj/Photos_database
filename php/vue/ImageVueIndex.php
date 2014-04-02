@@ -41,6 +41,7 @@ class ImageVueIndex {
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Afficher image">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="hidden" name="description" value="'.$image->getDescription().'">
               <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getTitre().'">
             </form>
           </a>
@@ -50,6 +51,7 @@ class ImageVueIndex {
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Afficher image">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="hidden" name="description" value="'.$image->getDescription().'">
               <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getDescription().'">
             </form>
           </a>
@@ -60,6 +62,7 @@ class ImageVueIndex {
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Afficher image">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="hidden" name="description" value="'.$image->getDescription().'">
               <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getTaille().'">
             </form>
           </a>

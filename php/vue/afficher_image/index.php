@@ -61,7 +61,7 @@
 				<img class="image_url" width="600" height="400" src=<?php echo './../'.$url_image;?> ></img>
 
 				<h3>Information</h3>
-				<p>Voici votre image.</p>
+				<p>Description : <?php echo $description_image; ?></p>
 			</div>
 
 		</div>
