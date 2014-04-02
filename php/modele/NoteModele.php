@@ -41,8 +41,9 @@ include_once 'ImageModele.php';
 	    }
 
 	    // On récupère tt
-	    $req = $bdd->prepare('SELECT `valeur` FROM `note` WHERE `Image_url`=?');
-		$req->execute(array($urlImage));
+		session_start();
+	    $req = $bdd->prepare('SELECT `valeur` FROM `note` WHERE `Image_url`=? and not `Utilisateur_nom`=?');
+		$req->execute(array($urlImage, $_SESSION['user']));
 
 		$somme = $note;
 		$counter = 1;
