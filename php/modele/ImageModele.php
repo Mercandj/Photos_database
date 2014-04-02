@@ -78,8 +78,8 @@ class ImageModele {
 	    }
 
 	    // On récupère tt
-	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? AND `url`=?');
-		$req->execute(array($_SESSION['user'],$image_url));
+	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `url`=?');
+		$req->execute(array($image_url));
 
 		$table = array();
 
