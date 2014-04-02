@@ -52,38 +52,54 @@ class ImageVueIndex {
             </form>
           </a>
         </td>
-
+        
         <td class="table_action_0">
-          <a>
+          <a>';
+          if($image->getUtilisateur_nom()===$_SESSION['user']) {
+            $res .= '
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Changer visibilite">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
               <SELECT name="visibilite" size="1" onChange="this.location=this.form.submit();">';
                   if($image->getVisibilite()==="public") {
-                    $res .='<OPTION value="public" selected>Public<OPTION value="private">Private';
+                    $res .='<OPTION value="public" selected>Publique<OPTION value="private">Privée';
                   }
                   else {
-                    $res .='<OPTION value="public">Public<OPTION value="private" selected>Private';
+                    $res .='<OPTION value="public">Publique<OPTION value="private" selected>Privée';
                   }
                   $res .='
               </SELECT>
               <noscript><input type="submit" value="Changer" /></noscript>
-            </form>
+            </form>';
+          }
+          else {
+            $res .= 'Publique';
+          }
+          $res .= '
           </a>
         </td>
 
         <td class="table_action_1">
-          <a>
+          <a>';
+          if($image->getUtilisateur_nom()===$_SESSION['user']) {
+            $res .= '
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Supprimer fichier">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
               <input type="submit" class="cssmenu_input" style="border-style:none;" value="Supprimer">
-            </form>
+            </form>';
+          } 
+          else {
+            $res .= 'Publique';
+          }
+          $res .= '
           </a>
         </td>
 
         <td class="table_action_2">
-          <a>
+          <a>';
+          if($image->getUtilisateur_nom()===$_SESSION['user']) {
+            $res .= '
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Changer categorie">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
@@ -99,7 +115,12 @@ class ImageVueIndex {
                   $res .='
               </SELECT>
               <noscript><input type="submit" value="Changer" /></noscript>
-            </form>
+            </form>';
+          }
+          else {
+            $res .= 'Publique';
+          }
+          $res .= '
           </a>
         </td>
 
