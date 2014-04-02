@@ -42,7 +42,14 @@ class ImageVueIndex {
           <a class="table_description" title="'.$image->getDescription().'" href="./../../'.$image->getUrl().'">'.$image->getDescription().'</a>
         </td>
         <td class="table_taille">
-          <a class="table_description" title="'.$image->getTaille().'" href="./../../'.$image->getUrl().'">'.$image->getTaille().' px</a>
+          <a>
+            <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Afficher image">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getTaille().'">
+            </form>
+          </a>
+
         </td>
         <td class="table_action_1">
           <a>
@@ -103,9 +110,7 @@ class ImageVueIndex {
             $res .='
           </a>
         </td>
-
-
-
+        
       </tr>';
     }
     $res = $res.'</table>';
