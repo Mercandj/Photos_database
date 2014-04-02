@@ -8,7 +8,7 @@
 		header("Location: ./../../../index.html");
 	}
 
-	$listeImages = '';
+	/*$listeImages = '';*/
 
 	include_once './../../controleur/MainControleur.php';
 		
@@ -21,10 +21,11 @@
 	include_once './../CategorieVueIndex.php';
 
 	include_once './../CategorieVue.php';
-
+/*
 	$image_url = $_GET['image'];
 	$im = new ImageModele();
 	$image = $im->getImage($image_url);
+	*/
 ?>
 
 <!DOCTYPE html>
@@ -57,7 +58,7 @@
 			<div class="affichage">
 				<h2>Photo !</h2>
 				<?php
-					echo $image->getTitre();
+					echo $url_image;
 				?>
 
 

@@ -86,7 +86,7 @@ class ImageVueIndex {
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
               <input type="hidden" name="action" value="Donner note">
               <input type="hidden" name="url" value="'.$image->getUrl().'">
-              <SELECT name="categorie" size="1" onChange="this.location=this.form.submit();">';
+              <SELECT name="note" size="1" onChange="this.location=this.form.submit();">';
 
                 for($i=0;$i<6;$i++) {
                   if($image->getNote()===$i) {
