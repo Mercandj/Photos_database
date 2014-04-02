@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `Image` (
   `titre` VARCHAR(100) NOT NULL,
   `taille` VARCHAR(100) NOT NULL,
   `taille_icone` VARCHAR(100) NOT NULL,
-  `note` DECIMAL(45) NOT NULL,
+  `note` DOUBLE NOT NULL,
   `commentaire` VARCHAR(500) NOT NULL,
   `date` DATE NOT NULL,
   `visibilite` VARCHAR(45) NOT NULL,
@@ -89,7 +89,7 @@ DROP TABLE IF EXISTS `Note` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `Note` (
-  `valeur` DECIMAL(45) NOT NULL,
+  `valeur` DOUBLE NOT NULL,
   `date` DATE NOT NULL,
   `Image_url` VARCHAR(100) NOT NULL,
   `Image_Utilisateur_nom` VARCHAR(45) NOT NULL,

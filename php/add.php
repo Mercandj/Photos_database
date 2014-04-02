@@ -66,7 +66,7 @@ include 'classe/Image.php';
         "null",
         "null",
         "null",
-        "public",
+        "private",
         $_SESSION['user'],
         "null"
         );

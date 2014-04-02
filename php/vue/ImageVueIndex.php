@@ -21,6 +21,7 @@ class ImageVueIndex {
       <td class="table_titre"><a>Titre</a></td>
       <td class="table_description"><a>Description</a></td>
       <td class="table_taille"><a>Taille</a></td>
+      <td class="table_action_0"><a>Visibilité</a></td>
       <td class="table_action_1"><a>Supprimer</a></td>
       <td class="table_action_2"><a>Categorie</a></td>
       <td class="table_action_3"><a>Ma Note</a></td>
@@ -41,6 +42,7 @@ class ImageVueIndex {
         <td class="table_description">
           <a class="table_description" title="'.$image->getDescription().'" href="./../../'.$image->getUrl().'">'.$image->getDescription().'</a>
         </td>
+
         <td class="table_taille">
           <a>
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
@@ -49,8 +51,27 @@ class ImageVueIndex {
               <input type="submit" class="cssmenu_input" style="border-style:none;" value="'.$image->getTaille().'">
             </form>
           </a>
-
         </td>
+
+        <td class="table_action_0">
+          <a>
+            <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
+              <input type="hidden" name="action" value="Changer visibilite">
+              <input type="hidden" name="url" value="'.$image->getUrl().'">
+              <SELECT name="categorie" size="1" onChange="this.location=this.form.submit();">';
+                  if($image->getVisibilite()==="public") {
+                    $res .='<OPTION value="Public" selected>Public<OPTION value="Private"Private>';
+                  }
+                  else {
+                    $res .='<OPTION value="Public"><OPTION value="Private" selected>';
+                  }
+                  $res .='
+              </SELECT>
+              <noscript><input type="submit" value="Changer" /></noscript>
+            </form>
+          </a>
+        </td>
+
         <td class="table_action_1">
           <a>
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
@@ -60,6 +81,7 @@ class ImageVueIndex {
             </form>
           </a>
         </td>
+
         <td class="table_action_2">
           <a>
             <form name="login_form" method="POST" action="./../../controleur/IndexControleur.php">
