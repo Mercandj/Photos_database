@@ -60,10 +60,10 @@ class ImageVueIndex {
               <input type="hidden" name="url" value="'.$image->getUrl().'">
               <SELECT name="visibilite" size="1" onChange="this.location=this.form.submit();">';
                   if($image->getVisibilite()==="public") {
-                    $res .='<OPTION value="Public" selected>Public<OPTION value="Private"Private>Private';
+                    $res .='<OPTION value="public" selected>Public<OPTION value="private">Private';
                   }
                   else {
-                    $res .='<OPTION value="Public">Public<OPTION value="Private" selected>Private';
+                    $res .='<OPTION value="public">Public<OPTION value="private" selected>Private';
                   }
                   $res .='
               </SELECT>
