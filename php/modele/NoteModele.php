@@ -16,10 +16,12 @@ include_once 'ImageModele.php';
 		session_start();
 		
 		$image_modele = new ImageModele();
+		$image = $image_modele->getImage($url)[0];
+		
 		$note = new Note(
 			$valeur, 
 			$date, 
-			$image_modele->getImage($url), 
+			$image, 
 			$_SESSION['user']);
 		
 		$req = $bdd->prepare($note->getinsert());
@@ -50,7 +52,7 @@ include_once 'ImageModele.php';
 			$counter++;
 	    }
 		
-		$req = $bdd->prepare('UPDATE `note` SET `valeur` = ? WHERE `Image_url` = ?');
+		$req = $bdd->prepare('UPDATE `image` SET `note` = ? WHERE `url` = ?');
 		$req->execute(array(arrondi($somme, $counter), $urlImage));
 		
 	    $req = null;
