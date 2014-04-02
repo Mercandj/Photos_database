@@ -88,7 +88,7 @@ DROP TABLE IF EXISTS `Note` ;
 
 SHOW WARNINGS;
 CREATE TABLE IF NOT EXISTS `Note` (
-  `valeur` INT NOT NULL,
+  `valeur` DECIMAL(45) NOT NULL,
   `date` DATE NOT NULL,
   `Image_url` VARCHAR(100) NOT NULL,
   `Image_Utilisateur_nom` VARCHAR(45) NOT NULL,
