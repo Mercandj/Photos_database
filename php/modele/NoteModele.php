@@ -1,5 +1,6 @@
 <?php 
 include '../classe/Note.php';
+include_once 'ImageModele.php';
 	function __construct() {
 
 	}
@@ -12,11 +13,13 @@ include '../classe/Note.php';
 	    }
 		
 		$date = date("Y-d-m");
+		session_start();
 		
+		$image_modele = new ImageModele();
 		$note = new Note(
 			$valeur, 
 			$date, 
-			$url, 
+			$image_modele->getImage($url), 
 			$_SESSION['user']);
 		
 		$req = $bdd->prepare($note->getinsert());

@@ -17,7 +17,7 @@
       $this->date = $pdate;
 
 	  
-      $this->Image_url = $pimage->geturl();
+      $this->Image_url = $pimage->getUrl();
       $this->Image_Utilisateur_nom = $pimage->getUtilisateur_nom();
       $this->Image_Categorie_nom = $pimage->getCategorie_nom();
       $this->Utilisateur_nom = $putilisateur->getnom();
