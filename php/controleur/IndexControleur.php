@@ -4,6 +4,7 @@ include "./../inc/logout.php";
 include "./../inc/supprimer.php";
 include "./../inc/changer_image.php";
 include "./../modele/ImageModele.php";
+include "./../modele/NoteModele.php";
 
 include_once "./../vue/CategorieVue.php";
 
@@ -37,6 +38,10 @@ switch($action) {
 		listeImagesCat($cv->genererHTML_table());*/
 
 		header("Location: ./../vue/categorie/index.php?categorie=".$_POST['categorie']);
+	break;
+	case "Donner note" :
+		ajouter_note();
+		header("Location: ./../vue/home/index.php");
 	break;
 }
 
