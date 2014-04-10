@@ -7,25 +7,6 @@
 		echo 'Session non activée';
 		header("Location: ./../../../index.html");
 	}
-
-	/*$listeImages = '';*/
-
-	include_once './../controleur/MainControleur.php';
-		
-	include_once './../classe/Image.php';
-	include_once './../modele/ImageModele.php';
-	include_once './../vue/ImageVueIndex.php';
-
-	include_once './../classe/Categorie.php';
-	include_once './../modele/CategorieModele.php';
-	include_once './../vue/CategorieVueIndex.php';
-
-	include_once './../vue/CategorieVue.php';
-/*
-	$image_url = $_GET['image'];
-	$im = new ImageModele();
-	$image = $im->getImage($image_url);
-	*/
 ?>
 
 <!DOCTYPE html>

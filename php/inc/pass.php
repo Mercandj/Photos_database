@@ -24,15 +24,15 @@
     //if it does, then check the password
     if($user_pass_list[$user] == $pass){
       $connect = 'true';
-      header("Location: ../html/home/index.php");
+      header("Location: ../../html/home/index.php");
       die();
         
      }else{
-      header("Location: ../index.html");
+      header("Location: ../../index.html");
       die();
     }
   }else{
-    header("Location: ../index.html");
+    header("Location: ../../index.html");
     die();
    }
   

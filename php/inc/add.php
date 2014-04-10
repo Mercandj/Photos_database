@@ -1,7 +1,7 @@
 
 <?php 
 
-include 'classe/Image.php';
+include '../classe/Image.php';
 
   $maxwidth = 200000;
   $maxheight = 200000;
@@ -24,22 +24,24 @@ include 'classe/Image.php';
 
       if(!isset($_SESSION))
         session_start();
+
+
       
       // Créer un dossier
-      @mkdir('./../bdd_images/'.$_SESSION['user'].'/', 0777, true);
+      @mkdir('./../../bdd_images/'.$_SESSION['user'].'/', 0777, true);
      
       $date_heure = date("Y-d-m_h-i-s");
 
       // Enregistre le fichier image
       $url = "./../bdd_images/".$_SESSION['user'].'/'.$date_heure.'_'.$_FILES['image']['name']/*.".{$extension_upload}"*/;
-      $resultat = move_uploaded_file($_FILES['image']['tmp_name'], $url);
+      $resultat = move_uploaded_file($_FILES['image']['tmp_name'], './.'.$url);
 
       // Création de l'icone
       $icone_url = "./../bdd_images/".$_SESSION['user'].'/icone_'.$date_heure.'_'.$_FILES['image']['name'];
       $icone = new Image(null,null,null,null,null,null,null,null,null,null,null); 
-      $icone->load($url); 
+      $icone->load('./.'.$url); 
       $icone->resize(600,400); 
-      $icone->save($icone_url);
+      $icone->save('./.'.$icone_url);
 
       // Création des attributs de l'image
       $date = date("Y-d-m");
@@ -75,7 +77,7 @@ include 'classe/Image.php';
       $req = $bdd->prepare($im->getinsert());
       $req->execute($im->getarray());
 
-      header("Location: ./vue/home/index.php");
+      header("Location: ../vue/home/index.php");
     }
     else {
       echo "Image trop grande";

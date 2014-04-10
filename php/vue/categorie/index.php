@@ -11,24 +11,10 @@
 	$listeImages = '';
 
 	include_once './../../controleur/MainControleur.php';
-		
-	include_once './../../classe/Image.php';
-	include_once './../../modele/ImageModele.php';
-	include_once './../ImageVueIndex.php';
-
-	include_once './../../classe/Categorie.php';
-	include_once './../../modele/CategorieModele.php';
-	include_once './../CategorieVueIndex.php';
-
-	include_once './../CategorieVue.php';
-	include_once './../Carousel.php';
-
+	$mc = new MainControleur();
+	
 	$categorie_nom = $_GET['categorie'];
-	$im = new ImageModele();
-	$listeImages = $im->getImageListe_Categorie($categorie_nom);
-	$cv = new CategorieVue($listeImages);
-
-	$listeImages_html = $cv->genererHTML_table();
+	$listeImages_html = $mc->get_categorie($categorie_nom);
 ?>
 
 <!DOCTYPE html>

@@ -2,19 +2,16 @@
 <?php 
 class ImageModele {
 
-	function __construct() {
+	private $bdd;
 
+	function __construct($pbdd) {
+		$this->bdd = $pbdd;
 	}
 
 	function getImageListe() {
-		try {
-	      $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
-	    } catch(Exception $e) {
-	      die('Erreur : '.$e->getMessage());
-	    }
-
+		
 	    // On récupère tt
-	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? OR `visibilite`=\'public\'');
+	    $req = $this->bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? OR `visibilite`=\'public\'');
 		$req->execute(array($_SESSION['user']));
 
 		$table = array();
@@ -40,14 +37,9 @@ class ImageModele {
 	}
 
 	function getImageListe_Categorie($categorie) {
-		try {
-	      $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
-	    } catch(Exception $e) {
-	      die('Erreur : '.$e->getMessage());
-	    }
-
+		
 	    // On récupère tt
-	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? AND `Categorie_nom`=?');
+	    $req = $this->bdd->prepare('SELECT * FROM `image` WHERE `Utilisateur_nom`=? AND `Categorie_nom`=?');
 		$req->execute(array($_SESSION['user'],$categorie));
 
 		$table = array();
@@ -73,14 +65,9 @@ class ImageModele {
 	}
 
 	function getImage($image_url) {
-		try {
-	      $bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
-	    } catch(Exception $e) {
-	      die('Erreur : '.$e->getMessage());
-	    }
-
+	    
 	    // On récupère tt
-	    $req = $bdd->prepare('SELECT * FROM `image` WHERE `url`=?');
+	    $req = $this->bdd->prepare('SELECT * FROM `image` WHERE `url`=?');
 		$req->execute(array($image_url));
 
 		$table = array();

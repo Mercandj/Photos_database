@@ -7,6 +7,9 @@
 		echo 'Session non activée';
 		header("Location: ./../../../index.html");
 	}
+
+	include_once './../../controleur/MainControleur.php';
+	$mc = new MainControleur();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +25,7 @@
 	</head>
 
 	<?php
-		include './../header.php';
+		include_once './../header.php';
 	?>
 
 	<body>	
@@ -30,7 +33,7 @@
 		<!-- Menu de gauche -->
 		<div class="left">
 			<?php
-				include './../menu.php';
+				include_once './../menu.php';
 			?>
 		</div>
 			
@@ -38,30 +41,17 @@
 				
 			<!-- Carousel -->
 			<?php
-			include './../../controleur/MainControleur.php';
-				
-			include './../../classe/Image.php';
-			include './../../modele/ImageModele.php';
-			include './../ImageVueIndex.php';
-
-			include './../../classe/Categorie.php';
-			include './../../modele/CategorieModele.php';
-			include './../CategorieVueIndex.php';
-
-			$mc = new MainControleur();
 			echo $mc->getHTML_carousel();
 			?>
 
 			<!-- Categorie -->
 			<?php
-				//$mc = new MainControleur();
 				echo $mc->getHTML_categorie();
 			?>
 
 			<div class="affichage">
 				<h2>Voici vos photos !</h2>
 				<?php
-					$mc = new MainControleur();
 					echo $mc->getHTML_table();
 				?>
 
@@ -73,7 +63,7 @@
 		</div>
 	</body>
 	<?php
-		include './../footer.php';
+		include_once './../footer.php';
 	?>
 
 	<script type="text/javascript" src="./../../../carousel/jquery.js"></script>

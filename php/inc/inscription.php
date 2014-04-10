@@ -1,9 +1,9 @@
 
 <?php 
 
-include 'classe/Utilisateur.php';
-include 'inc/check_utilisateur_db.php';
-include 'inc/message.php';
+include_once '../classe/Utilisateur.php';
+include_once 'check_utilisateur_db.php';
+include_once 'message.php';
 
   // Connexion à la base de données
   try
@@ -29,7 +29,7 @@ include 'inc/message.php';
 
 	  $req = $bdd->prepare($us->getinsert());
 	  $req->execute($us->getarray());
-	  affiche_message('Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password','./../');
+	  affiche_message('Felicitations, vous avez bien ete enregistre: vous pouvez desormais vous connecter avec votre username et votre password','./../../');
 
 	}
 

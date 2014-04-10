@@ -1,6 +1,6 @@
 <footer>
 	<center>
-		<form name="login_form" method="POST" action="./../../add.php" enctype="multipart/form-data">
+		<form name="login_form" method="POST" action="./../../inc/add.php" enctype="multipart/form-data">
 			<input type="text" class="saisie" placeholder="Description" style="border-style:none;" name="description">
 			<input type="text" class="saisie" placeholder="Titre" style="border-style:none;" name="titre">
 			<input type="file" class="input-file" style="border-style:none;" name="image" required/>

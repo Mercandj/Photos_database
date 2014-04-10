@@ -12,7 +12,7 @@
 		<div class="pt-main">
 			<h2>Inscrivez-vous :</h2>
 			<center>
-				<form name="login_form" method="POST" action="./../../inscription.php">
+				<form name="login_form" method="POST" action="./../../inc/inscription.php">
 					<input type="text" class="saisie-lg" placeholder="Pseudo" style="border-style:none;" name="user" required> <br/>
 					<input type="password" class="saisie-lg" placeholder="Mot de passe" style="border-style:none;" name="pass" required> <br/>
 					<input type="email" class="saisie-lg" placeholder="Email" style="border-style:none;" name="email" required> <br/>

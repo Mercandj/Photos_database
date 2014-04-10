@@ -1,10 +1,10 @@
 <?php 
 
-include "./../inc/logout.php";
-include "./../inc/supprimer.php";
-include "./../inc/changer_image.php";
-include "./../modele/ImageModele.php";
-include "./../modele/NoteModele.php";
+include_once "./../inc/logout.php";
+include_once "./../inc/supprimer.php";
+include_once "./../inc/changer_image.php";
+include_once "./../modele/ImageModele.php";
+include_once "./../modele/NoteModele.php";
 
 include_once "./../vue/CategorieVue.php";
 
