@@ -1,6 +1,7 @@
 
 <?php 
-
+  /* Classe relative à la table "Note". */
+  
   include "Image.php";
 
   class Note {

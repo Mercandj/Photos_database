@@ -32,12 +32,7 @@ switch($action) {
 		header("Location: ./../vue/home/index.php");
 	break;
 	case "Afficher categorie" :
-		/*$im = new ImageModele();
-		$cv = new CategorieVue($im->getImageListe_Categorie($_POST['categorie']));
-
-		listeImagesCat($cv->genererHTML_table());*/
-
-		header("Location: ./../vue/categorie/index.php?categorie=".$_POST['categorie']);
+		header("Location: ./../vue/afficher_categorie/index.php?categorie=".$_POST['categorie']);
 	break;
 	case "Donner note" :
 		ajouter_note($_POST['url'],$_POST['note']);

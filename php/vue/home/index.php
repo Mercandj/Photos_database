@@ -1,5 +1,4 @@
 <?php
-	// On démarre la session AVANT d'écrire du code HTML
 	session_start();
 	
 	// On vérifie si l'utilisateur est connecté
@@ -41,7 +40,7 @@
 				
 			<!-- Carousel -->
 			<?php
-			echo $mc->getHTML_carousel();
+				echo $mc->getHTML_carousel();
 			?>
 
 			<!-- Categorie -->
@@ -54,7 +53,6 @@
 				<?php
 					echo $mc->getHTML_table();
 				?>
-
 
 				<h3>Information</h3>
 				<p>Poster au moins 6 photos pour débloquer la galerie.</p>

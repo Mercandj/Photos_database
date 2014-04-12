@@ -1,6 +1,6 @@
 
 <?php 
-
+  /* Classe relative à la table "Image". */
   class Image {
 
     private $url;

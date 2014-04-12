@@ -1,6 +1,7 @@
 
 <?php 
-
+  /* Classe relative à la table "Utilisateur". */
+  
   class Utilisateur {
 
     private $nom;

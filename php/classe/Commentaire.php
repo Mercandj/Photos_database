@@ -1,6 +1,6 @@
 
 <?php 
-
+  /* Classe relative à la table "Commentaire". Faute de temps, cette classe n'est pas utilisée. */
   include "Image.php";
 
   class Commentaire {

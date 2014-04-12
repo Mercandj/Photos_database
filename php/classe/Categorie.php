@@ -1,6 +1,5 @@
-
 <?php 
-
+  /* Classe relative à la table "Categorie". Une catégorie joue le rôle d'album. */
   class Categorie {
 
     private $nom;

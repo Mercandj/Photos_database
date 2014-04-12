@@ -1,5 +1,7 @@
 <?php 
 
+/* Controleur principale. */
+
 include_once './../../classe/Image.php';
 include_once './../../modele/ImageModele.php';
 include_once './../../vue/ImageVueIndex.php';
